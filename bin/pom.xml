@@ -11,6 +11,8 @@
 	<groupId>br.com.akasystem</groupId>
 	<artifactId>v1</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
+	<name>v1</name>
+	<description>project akasystem version 1</description>
 	<packaging>pom</packaging><!--Esse pom vai ser do tipo parent, nossos modulos -->
 	<modules>
 		<module>akasales</module>
