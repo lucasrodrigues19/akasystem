@@ -1,9 +1,7 @@
 package br.com.akasystem.akasales.domains;
 
-import java.io.Serializable;
-import java.time.LocalDateTime;
-
 import br.com.akasystem.akasales.domains.pk.AKAOrderItemPK;
+import br.com.akasystem.core.domain.main.AKAMainEntity;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
@@ -13,21 +11,9 @@ import lombok.ToString;
 @Setter
 @NoArgsConstructor
 @ToString
-public class AKAOrderItem implements Serializable {
-
-	private static final long serialVersionUID = -3468469729858151785L;
+public class AKAOrderItem extends AKAMainEntity{
 
 	private AKAOrderItemPK id = new AKAOrderItemPK();
-	
-	private String name;
-	
-	private LocalDateTime dtInsert;
-	
-	private LocalDateTime dtUpdate;
-	
-	private String idInsert;
-	
-	private String idUpdate;
 	
 	private int quantity = 0;
 	

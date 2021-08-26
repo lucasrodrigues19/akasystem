@@ -1,10 +1,8 @@
 package br.com.akasystem.akasales.domains;
 
-import java.io.Serializable;
 import java.time.LocalDateTime;
-import java.util.List;
 
-import br.com.akasystem.akasales.enums.AKAOrderStatus;
+import br.com.akasystem.core.domain.main.AKAMainEntity;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
@@ -14,29 +12,15 @@ import lombok.ToString;
 @Setter
 @NoArgsConstructor
 @ToString
-public class AKAUser implements Serializable {
+public class AKAUser extends AKAMainEntity{
 	
-	private static final long serialVersionUID = -5387736056997906355L;
-
 	private String id;
 	
-	private String name;
+	private String email;
 	
-	private LocalDateTime dtInsert;
+	private String phone;
 	
-	private LocalDateTime dtUpdate;
-	
-	private String idInsert;
-	
-	private String idUpdate;
-	
-	private String idUser;
-	
-	private AKAOrderStatus akaOrderStatus;
-	
-	private AKAPayament akaPayament;
-	
-	private List<AKAOrderItem> akaOrderItem;
+	private String password;
 	
 	
 	

@@ -9,17 +9,38 @@
 		<relativePath>../</relativePath> <!-- lookup parent from repository -->
 	</parent>
 	<artifactId>akasales</artifactId>
-	<packaging>war</packaging>
 	<name>akasales</name>
 	<description>sales module for the aka system project</description>
+	<packaging>war</packaging>
 	<properties>
 		<java.version>1.8</java.version>
+		<akasystemv1-core.version>0.0.1-SNAPSHOT</akasystemv1-core.version>
 	</properties>
+	<dependencies>
+		<dependency>
+			<groupId>br.com.akasystem</groupId>
+			<artifactId>core</artifactId>
+			<version>${akasystemv1-core.version}</version>
+		</dependency>
+	</dependencies>
 	<build>
+		<finalName>akasales</finalName><!-- Nome gerado no jar -->
 		<plugins>
 			<plugin>
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-maven-plugin</artifactId>
+				<configuration>
+					<executable>true</executable>
+				</configuration>
+			</plugin>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-compiler-plugin</artifactId>
+				<version>3.8.1</version>
+				<configuration>
+					<source>1.8</source>
+					<target>1.8</target>
+				</configuration>
 			</plugin>
 		</plugins>
 	</build>

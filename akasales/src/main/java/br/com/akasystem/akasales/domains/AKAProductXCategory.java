@@ -1,23 +1,20 @@
 package br.com.akasystem.akasales.domains;
 
-import java.time.LocalDateTime;
 import java.util.List;
 
 import br.com.akasystem.akasales.domains.pk.AKAProductXCategoryPK;
-
-public class AKAProductXCategory {
+import br.com.akasystem.core.domain.main.AKAMainEntity;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
+import lombok.ToString;
+@Getter
+@Setter
+@NoArgsConstructor
+@ToString
+public class AKAProductXCategory extends AKAMainEntity {
 
 	private AKAProductXCategoryPK id = new AKAProductXCategoryPK();
-	
-	private String name;
-	
-	private LocalDateTime dtInsert;
-	
-	private LocalDateTime dtUpdate;
-	
-	private String idInsert;
-	
-	private String idUpdate;
 	
 	private List<AKAOrderItem> akaOrderItem;
 }

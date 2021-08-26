@@ -4,6 +4,16 @@
 
 ## Lucas Rodriges 2021/08/26
 ## ADDED
-    Projeto projeto akasales.
-        - adicionando template para teste.
-        - adicionando classes de dominio.
+     akasales.
+	        - adicionando template para teste.
+	        - adicionando classes de dominio.
+## Lucas Rodriges 2021/08/26
+## ADDED
+	core 
+		 - projeto criado
+	        - adicionando classes modelos de dominio.
+
+## Lucas Rodriges 2021/08/26
+## ADDED
+     akasales.
+	        - adicionando dependencia do projeto core.
