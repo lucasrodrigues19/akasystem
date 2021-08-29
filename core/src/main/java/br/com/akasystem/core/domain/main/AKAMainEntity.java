@@ -2,14 +2,12 @@ package br.com.akasystem.core.domain.main;
 
 import java.time.LocalDateTime;
 
-import javax.persistence.Entity;
 import javax.persistence.MappedSuperclass;
 
 import lombok.Getter;
 import lombok.Setter;
 import lombok.ToString;
 
-@Entity
 @Getter
 @Setter
 @ToString
@@ -25,4 +23,5 @@ public abstract class AKAMainEntity {
 	private String idInsert;
 	
 	private String idUpdate;
+	
 }

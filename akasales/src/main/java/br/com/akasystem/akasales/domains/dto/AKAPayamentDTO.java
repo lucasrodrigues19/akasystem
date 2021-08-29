@@ -1,9 +1,9 @@
 package br.com.akasystem.akasales.domains.dto;
 
 import java.io.Serializable;
-import java.time.LocalDateTime;
 
-import lombok.AllArgsConstructor;
+import br.com.akasystem.akasales.domains.AKAPayament;
+import br.com.akasystem.core.domain.main.dto.AKAMainEntityDTO;
 import lombok.Getter;
 import lombok.Setter;
 import lombok.ToString;
@@ -11,21 +11,15 @@ import lombok.ToString;
 
 @Getter
 @Setter
-@AllArgsConstructor
 @ToString
-public class AKAPayamentDTO implements Serializable{
+public class AKAPayamentDTO extends AKAMainEntityDTO implements Serializable {
 	
 	private static final long serialVersionUID = -7349233680346996798L;
 
 	private String id;
-	
-	private String name;
-	
-	private LocalDateTime dtInsert;
-	
-	private LocalDateTime dtUpdate;
-	
-	private String idInsert;
-	
-	private String idUpdate;
+
+	public AKAPayamentDTO(AKAPayament akaPayament) {
+		super(akaPayament);
+		this.id = akaPayament.getId();
+	}
 }

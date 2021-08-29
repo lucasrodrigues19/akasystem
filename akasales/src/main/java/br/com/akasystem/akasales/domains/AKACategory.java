@@ -1,5 +1,6 @@
 package br.com.akasystem.akasales.domains;
 
+import java.util.List;
 import java.util.Set;
 
 import br.com.akasystem.core.domain.main.AKAMainEntity;
@@ -16,7 +17,7 @@ public class AKACategory extends AKAMainEntity{
 
 	private String id;
 	
-	private Set<AKAProductXCategory> akaProductXCategory;
+	private Set<AKAProductXCategory> akaProductsXCategorys;
 	
-	
+	private List<AKAProduct> akaProducts;
 }

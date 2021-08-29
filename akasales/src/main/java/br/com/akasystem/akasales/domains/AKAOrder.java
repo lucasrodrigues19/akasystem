@@ -23,7 +23,9 @@ public class AKAOrder extends AKAMainEntity{
 	
 	private AKAPayament akaPayament;
 	
-	private List<AKAOrderItem> akaOrderItem;
+	private List<AKAOrderItem> akaOrderItems;
+	
+	private List<AKAProduct> akaProducts;
 	
 	
 	

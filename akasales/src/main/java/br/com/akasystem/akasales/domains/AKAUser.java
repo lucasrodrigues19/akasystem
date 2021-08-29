@@ -1,7 +1,12 @@
 package br.com.akasystem.akasales.domains;
 
-import java.time.LocalDateTime;
+import java.util.List;
+import java.util.stream.Collectors;
 
+import org.springframework.util.CollectionUtils;
+
+import br.com.akasystem.akasales.domains.dto.AKAOrderDTO;
+import br.com.akasystem.akasales.domains.dto.AKAOrderItemDTO;
 import br.com.akasystem.core.domain.main.AKAMainEntity;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -22,7 +27,6 @@ public class AKAUser extends AKAMainEntity{
 	
 	private String password;
 	
-	
-	
+	private List<AKAOrder> akaOrders;
 	
 }

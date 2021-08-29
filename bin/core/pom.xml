@@ -6,7 +6,6 @@
 		<groupId>br.com.akasystem</groupId>
 		<artifactId>v1</artifactId>
 		<version>0.0.1-SNAPSHOT</version>
-		<relativePath>../</relativePath> <!-- lookup parent from repository -->
 	</parent>
 	<artifactId>core</artifactId>
 	<name>core</name>
