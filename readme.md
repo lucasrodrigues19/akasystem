@@ -12,8 +12,8 @@
 
 ## SOBRE MIM
 
- - [Linkedin] (https://www.linkedin.com/in/lucas-rodrigues-521060191/)
- - [Twitter]  (https://twitter.com/l_Rodrigues20)
- - [Instagram] (https://www.instagram.com/lucas_pereira.20/)
+ - [Linkedin](https://www.linkedin.com/in/lucas-rodrigues-521060191/)
+ - [Twitter](https://twitter.com/l_Rodrigues20)
+ - [Instagram](https://www.instagram.com/lucas_pereira.20/)
 
 
