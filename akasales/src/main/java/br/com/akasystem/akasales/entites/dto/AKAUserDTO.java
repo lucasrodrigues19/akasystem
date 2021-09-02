@@ -8,7 +8,7 @@ import java.util.stream.Collectors;
 
 import org.springframework.util.CollectionUtils;
 
-import br.com.akasystem.akasales.entites.AKAUser;
+import br.com.akasystem.akasales.entitys.AKAUser;
 import br.com.akasystem.akasales.enums.AKAOrderStatus;
 import br.com.akasystem.core.domain.main.dto.AKAMainEntityDTO;
 import lombok.AllArgsConstructor;
@@ -33,7 +33,7 @@ public class AKAUserDTO extends AKAMainEntityDTO implements Serializable {
 	
 	private String password;
 	
-	List<AKAOrderDTO> akaOrderDTOs;
+	List<AKAOrderDTO> akaOrdersDTO;
 	
 	public AKAUserDTO(AKAUser akaUser) {
 		super(akaUser);
@@ -41,11 +41,13 @@ public class AKAUserDTO extends AKAMainEntityDTO implements Serializable {
 		this.email = akaUser.getEmail();
 		this.phone = akaUser.getPhone();
 		this.password = akaUser.getPassword();
+		setDatasStructure(akaUser);
 	}
 	
 	public void setDatasStructure(AKAUser akaUser) {
 		if(!CollectionUtils.isEmpty(akaUser.getAkaOrders())) 
-			this.akaOrderDTOs = akaUser.getAkaOrders().stream().map(aka -> new AKAOrderDTO(aka)).collect(Collectors.toList());
+			this.akaOrdersDTO = akaUser.getAkaOrders().stream().map(aka -> new AKAOrderDTO(aka)).collect(Collectors.toList());
 	}
+	
 	
 }

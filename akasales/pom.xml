@@ -22,6 +22,11 @@
 			<artifactId>core</artifactId>
 			<version>${akasystemv1-core.version}</version>
 		</dependency>
+		<dependency>
+		    <groupId>org.webjars</groupId>
+		    <artifactId>bootstrap</artifactId>
+		    <version>5.1.0</version>
+		</dependency>
 	</dependencies>
 	<build>
 		<finalName>akasales</finalName><!-- Nome gerado no jar -->

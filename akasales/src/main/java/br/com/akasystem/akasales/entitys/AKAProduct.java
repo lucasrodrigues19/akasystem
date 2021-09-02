@@ -1,4 +1,4 @@
-package br.com.akasystem.akasales.entites;
+package br.com.akasystem.akasales.entitys;
 
 import java.util.List;
 import java.util.Set;

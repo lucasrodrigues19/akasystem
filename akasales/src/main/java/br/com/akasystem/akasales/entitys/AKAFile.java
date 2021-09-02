@@ -1,4 +1,4 @@
-package br.com.akasystem.akasales.entites;
+package br.com.akasystem.akasales.entitys;
 
 import br.com.akasystem.akasales.enums.AKAFileType;
 import br.com.akasystem.core.domain.main.AKAMainEntity;
@@ -19,5 +19,5 @@ public class AKAFile extends AKAMainEntity{
 	
 	private String source;
 	
-	private String akaproductid;
+	private String akaProductId;
 }

@@ -1,6 +1,8 @@
-package br.com.akasystem.akasales.entites;
+package br.com.akasystem.akasales.entitys;
 
 import java.util.List;
+
+import org.springframework.util.CollectionUtils;
 
 import br.com.akasystem.akasales.enums.AKAOrderStatus;
 import br.com.akasystem.core.domain.main.AKAMainEntity;
@@ -26,7 +28,13 @@ public class AKAOrder extends AKAMainEntity implements Comparable<AKAOrder>{
 	private List<AKAOrderItem> akaOrderItems;
 	
 	private List<AKAProduct> akaProducts;
-
+  
+	
+	public double getTotalValue() {
+		if(!CollectionUtils.isEmpty(this.akaOrderItems))
+			return  this.akaOrderItems.stream().mapToDouble(oi -> oi.getQuantity() * oi.getPrice()).sum();
+		return 0.0;
+	}
 	
 	@Override
 	public int compareTo(AKAOrder o) {

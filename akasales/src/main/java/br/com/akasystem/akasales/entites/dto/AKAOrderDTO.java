@@ -7,7 +7,7 @@ import java.util.stream.Collectors;
 
 import org.springframework.util.CollectionUtils;
 
-import br.com.akasystem.akasales.entites.AKAOrder;
+import br.com.akasystem.akasales.entitys.AKAOrder;
 import br.com.akasystem.akasales.enums.AKAOrderStatus;
 import br.com.akasystem.core.domain.main.dto.AKAMainEntityDTO;
 import lombok.Getter;
@@ -25,17 +25,9 @@ public class AKAOrderDTO extends AKAMainEntityDTO implements Serializable {
 	
 	private String id;
 	
-	private String name;
-	
-	private LocalDateTime dtInsert;
-	
-	private LocalDateTime dtUpdate;
-	
-	private String idInsert;
-	
-	private String idUpdate;
-	
 	private String idUser;
+	
+	private double totalValue = 0.0;
 	
 	private AKAOrderStatus akaOrderStatus;
 	
@@ -43,14 +35,14 @@ public class AKAOrderDTO extends AKAMainEntityDTO implements Serializable {
 	
 	private List<AKAOrderItemDTO> akaOrderItemsDTO;
 	
-	private List<AKAProductDTO> akaProductsDTO;
-
 	public AKAOrderDTO(AKAOrder akaOrder) {
 		super(akaOrder);
 		this.id = akaOrder.getId();
 		this.akaOrderStatus = akaOrder.getAkaOrderStatus();
 		this.akaPayamentDTO = new AKAPayamentDTO(akaOrder.getAkaPayament());
+		this.totalValue = akaOrder.getTotalValue();
 		setDatasStructure(akaOrder);
+		
 	}
 	
 	private void setDatasStructure(AKAOrder akaOrder) {
@@ -59,14 +51,6 @@ public class AKAOrderDTO extends AKAMainEntityDTO implements Serializable {
 					.map(aka -> new AKAOrderItemDTO(aka))
 					.collect(Collectors.toList());
 		}
-		
-		if(!CollectionUtils.isEmpty(akaOrder.getAkaProducts())) {
-			this.akaProductsDTO = akaOrder.getAkaProducts().stream()
-					.map(aka -> new AKAProductDTO(aka))
-					.collect(Collectors.toList());
-		}
-		
 	}
-	
 	
 }

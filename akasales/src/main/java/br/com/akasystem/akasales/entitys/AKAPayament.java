@@ -1,4 +1,4 @@
-package br.com.akasystem.akasales.entites;
+package br.com.akasystem.akasales.entitys;
 
 import br.com.akasystem.core.domain.main.AKAMainEntity;
 import lombok.Getter;

@@ -39,3 +39,10 @@
 ## CHANGE
 	-akasales:
 		- mudando o nome dos pacotes:domanin para entitys, controllers para resource
+
+## [1.1.2] Lucas Rodriges 2021/08/28
+## ADDED
+	-akasales:
+        - bootstrap
+        - view para home
+        - File		

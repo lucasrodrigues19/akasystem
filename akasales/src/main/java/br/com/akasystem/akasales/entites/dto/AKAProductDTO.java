@@ -8,8 +8,8 @@ import java.util.stream.Collectors;
 
 import org.springframework.util.CollectionUtils;
 
-import br.com.akasystem.akasales.entites.AKAOrder;
-import br.com.akasystem.akasales.entites.AKAProduct;
+import br.com.akasystem.akasales.entitys.AKAOrder;
+import br.com.akasystem.akasales.entitys.AKAProduct;
 import br.com.akasystem.core.domain.main.AKAMainEntity;
 import br.com.akasystem.core.domain.main.dto.AKAMainEntityDTO;
 import lombok.AllArgsConstructor;
@@ -29,11 +29,9 @@ public class AKAProductDTO extends AKAMainEntityDTO implements Serializable{
 	
 	private List<AKAOrderItemDTO> akaOrderItemsDTO;
 	
-	private List<AKAOrderDTO> akaOrdersDTO;
+	private List<AKAFileDTO> akaFilesDTO;
 	
 	private Set<AKAProductXCategoryDTO> akaProductsXCategorysDTO;
-	
-	private Set<AKACategoryDTO> akaCategorysDTO;
 	
 	private Double price = 0.0;
 	
@@ -45,16 +43,13 @@ public class AKAProductDTO extends AKAMainEntityDTO implements Serializable{
 	}
 	private void setDatasStructure(AKAProduct akaProduct) {
 		
-		if(!CollectionUtils.isEmpty(akaProduct.getAkaOrderItems())) 
+		if(!CollectionUtils.isEmpty(akaProduct.getAkaOrderItems()))
 			this.akaOrderItemsDTO = akaProduct.getAkaOrderItems().stream().map(aka -> new AKAOrderItemDTO(aka)).collect(Collectors.toList());
-
-		if(!CollectionUtils.isEmpty(akaProduct.getAkaOrders())) 
-			this.akaOrdersDTO = akaProduct.getAkaOrders().stream().map(aka -> new AKAOrderDTO(aka)).collect(Collectors.toList());
 		
 		if(!CollectionUtils.isEmpty(akaProduct.getAkaProductsXCategorys())) 
 			this.akaProductsXCategorysDTO = akaProduct.getAkaProductsXCategorys().stream().map(aka -> new AKAProductXCategoryDTO(aka)).collect(Collectors.toSet());
 		
-		if(!CollectionUtils.isEmpty(akaProduct.getAkaCategorys())) 
-			this.akaCategorysDTO = akaProduct.getAkaCategorys().stream().map(aka -> new AKACategoryDTO(aka)).collect(Collectors.toSet());
+		if(!CollectionUtils.isEmpty(akaProduct.getAkaFiles())) 
+			this.akaFilesDTO = akaProduct.getAkaFiles().stream().map(aka -> new AKAFileDTO(aka)).collect(Collectors.toList());
 	}
 }

@@ -5,8 +5,8 @@ import java.time.LocalDateTime;
 import java.util.List;
 import java.util.Set;
 
-import br.com.akasystem.akasales.entites.AKAProductXCategory;
 import br.com.akasystem.akasales.entites.pk.AKAProductXCategoryPK;
+import br.com.akasystem.akasales.entitys.AKAProductXCategory;
 import br.com.akasystem.core.domain.main.dto.AKAMainEntityDTO;
 import lombok.AllArgsConstructor;
 import lombok.Getter;

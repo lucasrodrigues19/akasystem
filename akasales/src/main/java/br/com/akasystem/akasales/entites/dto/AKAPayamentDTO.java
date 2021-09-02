@@ -2,7 +2,7 @@ package br.com.akasystem.akasales.entites.dto;
 
 import java.io.Serializable;
 
-import br.com.akasystem.akasales.entites.AKAPayament;
+import br.com.akasystem.akasales.entitys.AKAPayament;
 import br.com.akasystem.core.domain.main.dto.AKAMainEntityDTO;
 import lombok.Getter;
 import lombok.Setter;

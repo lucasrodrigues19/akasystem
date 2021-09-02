@@ -4,8 +4,8 @@ import java.io.Serializable;
 import java.time.LocalDateTime;
 import java.util.List;
 
-import br.com.akasystem.akasales.entites.AKAOrderItem;
 import br.com.akasystem.akasales.entites.pk.AKAOrderItemPK;
+import br.com.akasystem.akasales.entitys.AKAOrderItem;
 import br.com.akasystem.core.domain.main.AKAMainEntity;
 import br.com.akasystem.core.domain.main.dto.AKAMainEntityDTO;
 import lombok.Getter;
