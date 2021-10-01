@@ -1,24 +1,16 @@
-## [1.0.0] Lucas Rodriges 2021/08/20
+## [1.0.4] Lucas Rodriges 2021/10/01
+## REMOVE
+	akasales
 ## ADDED
-    Projeto criado.
+  modules:
+		sales
+		shoping
+		input
+## CHANGE
+	
 
-##[1.0.0] Lucas Rodriges 2021/08/26
-## ADDED
-     akasales.
-	        - adicionando template para teste.
-	        - adicionando classes de dominio.
-## [1.0.0] Lucas Rodriges 2021/08/26
-## ADDED
-	core 
-		 - projeto criado
-	        - adicionando classes modelos de dominio.
 
-## [1.0.0] Lucas Rodriges 2021/08/26
-## ADDED
-     akasales.
-	        - adicionando dependencia do projeto core.
-
-## Lucas Rodriges 2021/08/28
+## [1.0.3] Lucas Rodriges 2021/08/28
 ## ADDED 
 	 -akasales: [1.0.1]
 	        - ajustes nas estruturas de relacionamento das domains;
@@ -46,3 +38,24 @@
         - bootstrap
         - view para home
         - File		
+
+## [1.0.0] Lucas Rodriges 2021/08/26
+## ADDED
+     akasales.
+	        - adicionando dependencia do projeto core.
+	        
+##[1.0.0] Lucas Rodriges 2021/08/26
+## ADDED
+     akasales.
+	        - adicionando template para teste.
+	        - adicionando classes de dominio.
+## [1.0.0] Lucas Rodriges 2021/08/26
+## ADDED
+	core 
+		 - projeto criado
+	        - adicionando classes modelos de dominio.
+	        
+## [1.0.0] Lucas Rodriges 2021/08/20
+## ADDED
+    Projeto criado.
+

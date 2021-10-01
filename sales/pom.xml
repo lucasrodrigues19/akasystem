@@ -6,14 +6,22 @@
 		<groupId>br.com.akasystem</groupId>
 		<artifactId>v1</artifactId>
 		<version>0.0.1-SNAPSHOT</version>
+		<relativePath>../</relativePath> <!-- lookup parent from repository -->
 	</parent>
-	<artifactId>core</artifactId>
-	<name>core</name>
-	<description>core module for the aka system project</description>
+	<artifactId>sales</artifactId>
+	<packaging>jar</packaging>
+	<name>sales</name>
+	<description>sales module for the aka system project</description>
+	<properties>
+		<akasystemv1-core.version>0.0.1-SNAPSHOT</akasystemv1-core.version>
+	</properties>
 	<dependencies>
-	
+		<dependency>
+			<groupId>br.com.akasystem</groupId>
+			<artifactId>core</artifactId>
+			<version>${akasystemv1-core.version}</version>
+		</dependency>
 	</dependencies>
-	
 	<build>
 		<plugins>
 			<plugin>

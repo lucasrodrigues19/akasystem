@@ -1,0 +1,22 @@
+
+Duvidas - gerais:
+	
+	30/09/2021
+		Uma classe com estrategia TABLE_PER_CLASS, seus relacionamentos de one to many não vao valer
+		pois na tabela filha, não tem como saber de quem é esse relacionamento. Se é da classe pai
+		ou das classes que herdaram
+
+
+Duvidas - Entidades:
+	
+	User:
+		01/10/2021
+			 Por que usar JOINED em User?
+				UserPejorative e UserPhysical, são um User, ou seja só vão existir
+				caso User exista, São apenas para diferenciar o Usuario em serviços diferentes.
+	
+	Product:
+		01/10/2021
+			Por que usar JOINED em Product?
+				ProductSold e ProductSale, são um Product, ou seja só vão existir
+				caso Product exista, São apenas para diferenciar o Product em serviços diferentes.				
