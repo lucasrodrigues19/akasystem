@@ -1,7 +1,6 @@
 package br.com.akasystem.core.entities;
 
 import java.io.Serializable;
-import java.util.UUID;
 
 import javax.persistence.Entity;
 import javax.persistence.Table;
@@ -10,11 +9,15 @@ import br.com.akasystem.core.entities.main.SingleMainEntity;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+/**
+ * @author Lucas Rodrigues
+ * @since 2021/10/02
+ */
 @Data
 @NoArgsConstructor
 @Entity
 @Table(name = "tbroles")
-public class Roles extends SingleMainEntity<UUID> implements Serializable{
+public class Roles extends SingleMainEntity implements Serializable{
 
 	private static final long serialVersionUID = 1L;
 	

@@ -3,7 +3,6 @@ package br.com.akasystem.sales.entities;
 
 import java.util.HashSet;
 import java.util.Set;
-import java.util.UUID;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -22,12 +21,16 @@ import lombok.Getter;
 import lombok.Setter;
 import lombok.ToString;
 
+/**
+ * @author Lucas Rodrigues
+ * @since 2021/10/02
+ */
 @Getter
 @Setter
 @ToString
 @Entity
 @Table(name = "tbsales")
-public class Sales extends SingleMainEntity<UUID> {
+public class Sales extends SingleMainEntity {
 
 	private static final long serialVersionUID = 1L;
 
@@ -45,7 +48,7 @@ public class Sales extends SingleMainEntity<UUID> {
 	
 	@Setter(AccessLevel.NONE)
 	@OneToMany(fetch = FetchType.LAZY, mappedBy = "id.sales")
-	private Set<SalesItem> setOrderItem = new HashSet<>();
+	private Set<SalesItem> setSalesItem = new HashSet<>();
 	
 	@Override
 	public int hashCode() {

@@ -1,7 +1,6 @@
 package br.com.akasystem.core.entities;
 
 import java.io.Serializable;
-import java.util.UUID;
 
 import javax.persistence.EmbeddedId;
 import javax.persistence.Entity;
@@ -15,12 +14,16 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.ToString;
 
+/**
+ * @author Lucas Rodrigues
+ * @since 2021/10/02
+ */
 @Getter
 @ToString
 @Entity
 @NoArgsConstructor
 @Table(name = "tbproductxcategory")
-public class ProductXCategory extends MainEntity<UUID> implements Serializable  {
+public class ProductXCategory extends MainEntity implements Serializable  {
 
 	
 	private static final long serialVersionUID = 1L;

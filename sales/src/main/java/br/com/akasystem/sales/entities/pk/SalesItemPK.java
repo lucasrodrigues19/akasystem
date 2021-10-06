@@ -13,9 +13,12 @@ import br.com.akasystem.sales.entities.Sales;
 import lombok.Getter;
 import lombok.Setter;
 
+/**
+ * @author Lucas Rodrigues
+ * @since 2021/10/02
+ */
 @Getter
 @Setter
-
 @Embeddable
 public class SalesItemPK implements Serializable {
 

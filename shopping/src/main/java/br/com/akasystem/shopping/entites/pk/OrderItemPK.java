@@ -7,7 +7,6 @@ import javax.persistence.ForeignKey;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 
-import br.com.akasystem.core.entities.Product;
 import br.com.akasystem.shopping.entities.Order;
 import br.com.akasystem.shopping.entities.ProductSold;
 import lombok.Getter;

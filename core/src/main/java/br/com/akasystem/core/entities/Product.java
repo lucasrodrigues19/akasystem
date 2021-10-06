@@ -4,7 +4,6 @@ import java.util.ArrayList;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
-import java.util.UUID;
 
 import javax.persistence.CascadeType;
 import javax.persistence.Column;
@@ -21,13 +20,17 @@ import lombok.Getter;
 import lombok.Setter;
 import lombok.ToString;
 
+/**
+ * @author Lucas Rodrigues
+ * @since 2021/10/02
+ */
 @Getter
 @Setter
 @ToString
 @Entity
 @Table(name = "tbproduct")
 @Inheritance(strategy=InheritanceType.JOINED)
-public  class Product extends SingleMainEntity<UUID>{
+public  class Product extends SingleMainEntity{
 
 	private static final long serialVersionUID = 1L;
 	

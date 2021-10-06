@@ -3,7 +3,6 @@ package br.com.akasystem.shopping.entities;
 import java.io.Serializable;
 import java.util.HashSet;
 import java.util.Set;
-import java.util.UUID;
 
 import javax.persistence.CascadeType;
 import javax.persistence.Entity;
@@ -26,13 +25,17 @@ import lombok.NoArgsConstructor;
 import lombok.Setter;
 import lombok.ToString;
 
+/**
+ * @author Lucas Rodrigues
+ * @since 2021/10/02
+ */
 @Getter
 @Setter
 @NoArgsConstructor
 @ToString
 @Entity
 @Table(name = "tborder")
-public class Order extends SingleMainEntity<UUID> implements Comparable<Order>, Serializable{
+public class Order extends SingleMainEntity implements Comparable<Order>, Serializable{
 	
 	private static final long serialVersionUID = 1L;
 

@@ -5,12 +5,14 @@ import java.io.Serializable;
 import br.com.akasystem.core.entities.main.dto.MainEntityDTO;
 import br.com.akasystem.shopping.entites.pk.OrderItemPK;
 import br.com.akasystem.shopping.entities.OrderItem;
-import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 import lombok.ToString;
 
-@Getter
+/**
+ * @author Lucas Rodrigues
+ * @since 2021/10/02
+ */
 @Setter
 @NoArgsConstructor
 @ToString

@@ -2,6 +2,10 @@ package br.com.akasystem.shopping.enums;
 
 import lombok.Getter;
 
+/**
+ * @author Lucas Rodrigues
+ * @since 2021/10/02
+ */
 @Getter
 public enum OrderStatus {
 

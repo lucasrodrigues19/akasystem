@@ -1,7 +1,5 @@
 package br.com.akasystem.sales.entities;
 
-import java.util.UUID;
-
 import javax.persistence.Column;
 import javax.persistence.EmbeddedId;
 import javax.persistence.Entity;
@@ -16,12 +14,16 @@ import lombok.Getter;
 import lombok.Setter;
 import lombok.ToString;
 
+/**
+ * @author Lucas Rodrigues
+ * @since 2021/10/02
+ */
 @Getter
 @Setter
 @ToString
 @Entity
 @Table(name = "tbsalesitem")
-public class SalesItem extends MainEntity<UUID> {
+public class SalesItem extends MainEntity{
 
 
 	@Setter(AccessLevel.NONE)

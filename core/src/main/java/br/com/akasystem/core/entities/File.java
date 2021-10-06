@@ -17,13 +17,17 @@ import lombok.NoArgsConstructor;
 import lombok.Setter;
 import lombok.ToString;
 
+/**
+ * @author Lucas Rodrigues
+ * @since 2021/10/02
+ */
 @Getter
 @Setter
 @NoArgsConstructor
 @ToString
 @Entity
 @Table(name = "tbfile")
-public class File extends SingleMainEntity<UUID> implements Serializable {
+public class File extends SingleMainEntity implements Serializable {
 	
 	private static final long serialVersionUID = 1L;
 

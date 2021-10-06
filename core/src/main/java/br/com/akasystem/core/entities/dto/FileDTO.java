@@ -11,11 +11,15 @@ import lombok.NoArgsConstructor;
 import lombok.Setter;
 import lombok.ToString;
 
+/**
+ * @author Lucas Rodrigues
+ * @since 2021/10/02
+ */
 @Getter
 @Setter
 @NoArgsConstructor
 @ToString
-public class FileDTO extends MainEntityDTO<UUID> implements Serializable{ 
+public class FileDTO extends MainEntityDTO implements Serializable{ 
 
 	private static final long serialVersionUID = -2825205901035568669L;
 

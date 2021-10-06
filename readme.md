@@ -3,15 +3,23 @@
 ## MODELAGEM DE DADOS
 
 - Microserviços
-![alt text](https://github.com/lucasrodrigues19/akasystem/blob/development/_images/AkaSystem-microservies aka system.png?raw=true)
+![alt text](https://github.com/lucasrodrigues19/akasystem/blob/development/_images/AkaSystem_microservies.png?raw=true)
 
 - Relacionamento entre entidades
-![alt text](https://github.com/lucasrodrigues19/akasystem/blob/development/_images/AkaSystem-all-modeling.png?raw=true)
+![alt text](https://github.com/lucasrodrigues19/akasystem/blob/development/_images/AkaSystem_all_modeling.png?raw=true)
 
 - Herança das entidades
-![alt text](https://github.com/lucasrodrigues19/akasystem/blob/development/_images/AkaSystem-extends.png?raw=true)
+![alt text](https://github.com/lucasrodrigues19/akasystem/blob/development/_images/AkaSystem_extends.png?raw=true)
 
 
+## OBJETOS EM MEMORIA
+
+- Sales
+![alt text](https://github.com/lucasrodrigues19/akasystem/blob/development/_images/AkaSystem_Objetos_em_memoria_sales.png?raw=true)
+
+
+- Shopping
+![alt text](https://github.com/lucasrodrigues19/akasystem/blob/development/_images/AkaSystem_Objetos_em_memoria_shopping.png?raw=true)
 
 ## SOBRE MIM
 

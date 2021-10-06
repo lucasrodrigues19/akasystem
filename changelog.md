@@ -1,3 +1,11 @@
+## [1.0.5] Lucas Rodriges 2021/10/06
+## FIXED
+	ajuste nas entidades
+## ADDED
+	adicionando camada de repository
+	classe para teste no perfil test
+	service para User
+
 ## [1.0.4] Lucas Rodriges 2021/10/01
 ## REMOVE
 	akasales
@@ -6,9 +14,7 @@
 		sales
 		shoping
 		input
-## CHANGE
 	
-
 
 ## [1.0.3] Lucas Rodriges 2021/08/28
 ## ADDED 

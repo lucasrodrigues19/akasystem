@@ -11,14 +11,18 @@ import lombok.NoArgsConstructor;
 import lombok.Setter;
 import lombok.ToString;
 
+/**
+ * @author Lucas Rodrigues
+ * @since 2021/10/02
+ */
 @MappedSuperclass
 @Getter
 @Setter
 @ToString
 @NoArgsConstructor
-public abstract class MainEntityDTO<I> {
+public abstract class MainEntityDTO {
 
-	private I id;
+	private UUID id;
 	
 	private String name;
 	
@@ -30,7 +34,7 @@ public abstract class MainEntityDTO<I> {
 	
 	private UUID idUpdate;
 
-	public MainEntityDTO(MainEntity<I> akaMainEntity) {
+	public MainEntityDTO(MainEntity akaMainEntity) {
 //		this.id = akaMainEntity.getId();
 		this.name = akaMainEntity.getName();
 		this.dtInsert = akaMainEntity.getDtInsert();

@@ -20,13 +20,17 @@ import lombok.NoArgsConstructor;
 import lombok.Setter;
 import lombok.ToString;
 
+/**
+ * @author Lucas Rodrigues
+ * @since 2021/10/02
+ */
 @Getter
 @Setter
 @NoArgsConstructor
 @ToString
 @Entity
 @Table(name = "tbcategory")
-public class Category extends SingleMainEntity<UUID> implements Comparable<Category>, Serializable {
+public class Category extends SingleMainEntity implements Comparable<Category>, Serializable {
 	
 	private static final long serialVersionUID = 1L;
 

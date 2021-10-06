@@ -1,25 +1,26 @@
  --Lucas Rodirgues - 01/10/2021 Criando estrutura para versão 1 de aka system   
- 
-    create table public.tbcategory (
+
+    
+    create table _create.tbcategory (
        id varchar(255) not null,
         dtinsert timestamp not null,
         dtupdate timestamp not null,
         idinsert varchar(255) not null,
         idupdate varchar(255) not null,
-        name varchar(255) not null,
-        statusactive numeric(1) not null,
+        _name varchar(255) not null,
+        _status numeric(1) not null,
         primary key (id)
     );
- 
+
     
-    create table public.tbfile (
+    create table _create.tbfile (
        id varchar(255) not null,
         dtinsert timestamp not null,
         dtupdate timestamp not null,
         idinsert varchar(255) not null,
         idupdate varchar(255) not null,
-        name varchar(255) not null,
-        statusactive numeric(1) not null,
+        _name varchar(255) not null,
+        _status numeric(1) not null,
         filetype varchar(80) not null,
         productid varchar(255),
         source oid not null,
@@ -27,41 +28,41 @@
     );
  
     
-    create table public.tborder (
+    create table _create.tborder (
        id varchar(255) not null,
         dtinsert timestamp not null,
         dtupdate timestamp not null,
         idinsert varchar(255) not null,
         idupdate varchar(255) not null,
-        name varchar(255) not null,
-        statusactive numeric(1) not null,
+        _name varchar(255) not null,
+        _status numeric(1) not null,
         payamentid varchar(255),
         userid varchar(255),
         primary key (id)
     );
  
     
-    create table public.tborderevolution (
+    create table _create.tborderevolution (
        id varchar(255) not null,
         dtinsert timestamp not null,
         dtupdate timestamp not null,
         idinsert varchar(255) not null,
         idupdate varchar(255) not null,
-        name varchar(255) not null,
-        statusactive numeric(1) not null,
+        _name varchar(255) not null,
+        _status numeric(1) not null,
         orderstatus varchar(80) not null,
         orderid varchar(255),
         primary key (id)
     );
  
     
-    create table public.tborderitem (
+    create table _create.tborderitem (
        dtinsert timestamp not null,
         dtupdate timestamp not null,
         idinsert varchar(255) not null,
         idupdate varchar(255) not null,
-        name varchar(255) not null,
-        statusactive numeric(1) not null,
+        _name varchar(255) not null,
+        _status numeric(1) not null,
         price numeric(10,2) default 0.0 not null,
         quantity numeric (1) default 0 not null,
         orderid varchar(255) not null,
@@ -70,116 +71,116 @@
     );
  
     
-    create table public.tbpayament (
+    create table _create.tbpayament (
        id varchar(255) not null,
         dtinsert timestamp not null,
         dtupdate timestamp not null,
         idinsert varchar(255) not null,
         idupdate varchar(255) not null,
-        name varchar(255) not null,
-        statusactive numeric(1) not null,
+        _name varchar(255) not null,
+        _status numeric(1) not null,
         primary key (id)
     );
  
     
-    create table public.tbprivilege (
+    create table _create.tbprivilege (
        dtinsert timestamp not null,
         dtupdate timestamp not null,
         idinsert varchar(255) not null,
         idupdate varchar(255) not null,
-        name varchar(255) not null,
-        statusactive numeric(1) not null,
+        _name varchar(255) not null,
+        _status numeric(1) not null,
         userid varchar(255) not null,
         rolesid varchar(255) not null,
         primary key (rolesid, userid)
     );
  
     
-    create table public.tbproduct (
+    create table _create.tbproduct (
        id varchar(255) not null,
         dtinsert timestamp not null,
         dtupdate timestamp not null,
         idinsert varchar(255) not null,
         idupdate varchar(255) not null,
-        name varchar(255) not null,
-        statusactive numeric(1) not null,
+        _name varchar(255) not null,
+        _status numeric(1) not null,
         price numeric(10,2) default 0.0 not null,
         primary key (id)
     );
  
     
-    create table public.tbproductsale (
+    create table _create.tbproductsale (
        id varchar(255) not null,
         userid varchar(255) not null,
         primary key (id)
     );
  
     
-    create table public.tbproductsold (
+    create table _create.tbproductsold (
        id varchar(255) not null,
         primary key (id)
     );
  
     
-    create table public.tbproductxcategory (
+    create table _create.tbproductxcategory (
        dtinsert timestamp not null,
         dtupdate timestamp not null,
         idinsert varchar(255) not null,
         idupdate varchar(255) not null,
-        name varchar(255) not null,
-        statusactive numeric(1) not null,
+        _name varchar(255) not null,
+        _status numeric(1) not null,
         categoryid varchar(255) not null,
         productid varchar(255) not null,
         primary key (categoryid, productid)
     );
  
     
-    create table public.tbroles (
+    create table _create.tbroles (
        id varchar(255) not null,
         dtinsert timestamp not null,
         dtupdate timestamp not null,
         idinsert varchar(255) not null,
         idupdate varchar(255) not null,
-        name varchar(255) not null,
-        statusactive numeric(1) not null,
+        _name varchar(255) not null,
+        _status numeric(1) not null,
         primary key (id)
     );
  
     
-    create table public.tbsales (
+    create table _create.tbsales (
        id varchar(255) not null,
         dtinsert timestamp not null,
         dtupdate timestamp not null,
         idinsert varchar(255) not null,
         idupdate varchar(255) not null,
-        name varchar(255) not null,
-        statusactive numeric(1) not null,
+        _name varchar(255) not null,
+        _status numeric(1) not null,
         price numeric(10,2) default 0.0 not null,
         userid varchar(255) not null,
         primary key (id)
     );
  
     
-    create table public.tbsalesevolution (
+    create table _create.tbsalesevolution (
        id varchar(255) not null,
         dtinsert timestamp not null,
         dtupdate timestamp not null,
         idinsert varchar(255) not null,
         idupdate varchar(255) not null,
-        name varchar(255) not null,
-        statusactive numeric(1) not null,
+        _name varchar(255) not null,
+        _status numeric(1) not null,
         salesid varchar(255) not null,
         primary key (id)
     );
  
     
-    create table public.tbsalesitem (
+    create table _create.tbsalesitem (
        dtinsert timestamp not null,
         dtupdate timestamp not null,
         idinsert varchar(255) not null,
         idupdate varchar(255) not null,
-        name varchar(255) not null,
-        statusactive numeric(1) not null,
+        _name varchar(255) not null,
+        _status numeric(1) not null,
         price numeric(10,2) default 0.0 not null,
         quantity numeric (1) default 0 not null,
         salesid varchar(255) not null,
@@ -188,146 +189,146 @@
     );
  
     
-    create table public.tbuser (
+    create table _create.tbuser (
        id varchar(255) not null,
         dtinsert timestamp not null,
         dtupdate timestamp not null,
         idinsert varchar(255) not null,
         idupdate varchar(255) not null,
-        name varchar(255) not null,
-        statusactive numeric(1) not null,
+        _name varchar(255) not null,
+        _status numeric(1) not null,
         email varchar(255) not null,
-        password varchar(25) not null,
+        _password varchar(25) not null,
         phone varchar(14) not null,
         primary key (id)
     );
  
     
-    create table public.tbuserpejorative (
+    create table _create.tbuserpejorative (
        cnpj varchar(14) not null,
         id varchar(255) not null,
         primary key (id)
     );
  
     
-    create table public.tbuserphysical (
+    create table _create.tbuserphysical (
        cpf varchar(11) not null,
         id varchar(255) not null,
         primary key (id)
     );
  
     
-    alter table public.tbuser 
-       drop constraint uk_emailxphone;
+    alter table _create.tbuser 
+       drop constraint if exists uk_emailxphone;
  
     
-    alter table public.tbuser 
+    alter table _create.tbuser 
        add constraint uk_emailxphone unique (email, phone);
  
     
-    alter table public.tborder 
+    alter table _create.tborder 
        add constraint fk_orderxpayament01 
        foreign key (payamentid) 
-       references public.tbpayament;
+       references _create.tbpayament;
  
     
-    alter table public.tborder 
+    alter table _create.tborder 
        add constraint fk_orderxuser01 
        foreign key (userid) 
-       references public.tbuserphysical;
+       references _create.tbuserphysical;
  
     
-    alter table public.tborderevolution 
+    alter table _create.tborderevolution 
        add constraint fk_orderxorderevolution 
        foreign key (orderid) 
-       references public.tborder;
+       references _create.tborder;
  
     
-    alter table public.tborderitem 
+    alter table _create.tborderitem 
        add constraint fk_orderitemxorder 
        foreign key (orderid) 
-       references public.tborder;
+       references _create.tborder;
  
     
-    alter table public.tborderitem 
+    alter table _create.tborderitem 
        add constraint fk_orderitemxproductsold 
        foreign key (productid) 
-       references public.tbproductsold;
+       references _create.tbproductsold;
  
     
-    alter table public.tbprivilege 
+    alter table _create.tbprivilege 
        add constraint fk_privilegexuser 
        foreign key (userid) 
-       references public.tbuser;
+       references _create.tbuser;
  
     
-    alter table public.tbprivilege 
+    alter table _create.tbprivilege 
        add constraint fk_privilegexroles 
        foreign key (rolesid) 
-       references public.tbroles;
+       references _create.tbroles;
  
     
-    alter table public.tbproductsale 
+    alter table _create.tbproductsale 
        add constraint fk_userpjxproductsale 
        foreign key (userid) 
-       references public.tbuserpejorative;
+       references _create.tbuserpejorative;
  
     
-    alter table public.tbproductsale 
-       add constraint fk_productsalexproduct 
+    alter table _create.tbproductsale 
+       add constraint fk_productxproductsale 
        foreign key (id) 
-       references public.tbproduct;
+       references _create.tbproduct;
  
     
-    alter table public.tbproductsold 
-       add constraint fk_productsoldxproduct 
+    alter table _create.tbproductsold 
+       add constraint fk_productxproductsold 
        foreign key (id) 
-       references public.tbproduct;
+       references _create.tbproduct;
  
     
-    alter table public.tbproductxcategory 
+    alter table _create.tbproductxcategory 
        add constraint fk_productcategoryxcategory 
        foreign key (categoryid) 
-       references public.tbcategory;
+       references _create.tbcategory;
  
     
-    alter table public.tbproductxcategory 
+    alter table _create.tbproductxcategory 
        add constraint fk_productcategoryxproduct 
        foreign key (productid) 
-       references public.tbproduct;
+       references _create.tbproduct;
  
     
-    alter table public.tbsales 
+    alter table _create.tbsales 
        add constraint fk_userpjxsales 
        foreign key (userid) 
-       references public.tbuserpejorative;
+       references _create.tbuserpejorative;
  
     
-    alter table public.tbsalesevolution 
+    alter table _create.tbsalesevolution 
        add constraint fk_salesxsalesevolution 
        foreign key (salesid) 
-       references public.tbsales;
+       references _create.tbsales;
  
     
-    alter table public.tbsalesitem 
+    alter table _create.tbsalesitem 
        add constraint fk_saleitemxsales 
        foreign key (salesid) 
-       references public.tbsales;
+       references _create.tbsales;
  
     
-    alter table public.tbsalesitem 
+    alter table _create.tbsalesitem 
        add constraint fk_saleitemxproductsale 
        foreign key (productsaleid) 
-       references public.tbproductsale;
+       references _create.tbproductsale;
  
     
-    alter table public.tbuserpejorative 
-       add constraint fk_userpejorativexuser
+    alter table _create.tbuserpejorative 
+       add constraint fk_userxuserpejorative 
        foreign key (id) 
-       references public.tbuser;
+       references _create.tbuser;
  
     
-    alter table public.tbuserphysical 
-       add constraint fk_userphysicalxuser
+    alter table _create.tbuserphysical 
+       add constraint fk_userxuserphysical
        foreign key (id) 
-       references public.tbuser;
+       references _create.tbuser;

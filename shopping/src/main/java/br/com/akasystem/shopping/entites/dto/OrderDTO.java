@@ -2,7 +2,6 @@ package br.com.akasystem.shopping.entites.dto;
 
 import java.io.Serializable;
 import java.util.List;
-import java.util.UUID;
 import java.util.stream.Collectors;
 
 import org.springframework.util.CollectionUtils;
@@ -15,11 +14,15 @@ import lombok.NoArgsConstructor;
 import lombok.Setter;
 import lombok.ToString;
 
+/**
+ * @author Lucas Rodrigues
+ * @since 2021/10/02
+ */
 @Getter	
 @Setter
 @NoArgsConstructor
 @ToString
-public class OrderDTO extends MainEntityDTO<UUID> implements Serializable {
+public class OrderDTO extends MainEntityDTO implements Serializable {
 	
 	private static final long serialVersionUID = -5387736056997906355L;
 	

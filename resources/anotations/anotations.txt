@@ -1,3 +1,22 @@
+CONFIGURAR PERFIL TEST
+
+OLHAR O POR QUE O GETTER DE ORDERITEMDTO NÃO FUNCIONA
+
+
+OS SERVIÇOS NÃO SE COMUNICAM, MAS AS TABELAS NO  BANCO SIM!
+
+
+
+
+1 - adicionar e moelar classes de dominio.
+
+2 - adicionar camada de repositorio.
+
+3 - adicionar camada de serviço.
+
+4 - adicionar camada de recursos endpoints, e actions
+
+
 
 Duvidas - gerais:
 	
@@ -5,7 +24,23 @@ Duvidas - gerais:
 		Uma classe com estrategia TABLE_PER_CLASS, seus relacionamentos de one to many não vao valer
 		pois na tabela filha, não tem como saber de quem é esse relacionamento. Se é da classe pai
 		ou das classes que herdaram
+		
+	06/10/2021
+		enums  @Enumerated.ordinal:
+			ex1:
+				Status { active(1), remove(0), inative(2)}
+				Status.active = 0, no banco.
+			ex2:
+				Status { remove(0),active(1), inative(2)}
+				Status.active = 1, no banco.	
+		
+			
 
+	referencias:
+		Passar enum como parametro em um @Query:
+			https://stackoverflow.com/questions/44460394/can-i-use-enum-parameter-into-jparepository-nativequery
+		
+	
 
 Duvidas - Entidades:
 	

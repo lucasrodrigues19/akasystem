@@ -1,7 +1,6 @@
 package br.com.akasystem.shopping.entities;
 
 import java.io.Serializable;
-import java.util.UUID;
 
 import javax.persistence.Column;
 import javax.persistence.EmbeddedId;
@@ -18,12 +17,16 @@ import lombok.Getter;
 import lombok.Setter;
 import lombok.ToString;
 
+/**
+ * @author Lucas Rodrigues
+ * @since 2021/10/02
+ */
 @Getter
 @Setter
 @ToString
 @Entity
 @Table(name = "tborderitem")
-public class OrderItem extends MainEntity<UUID> implements Serializable{
+public class OrderItem extends MainEntity implements Serializable{
 
 	private static final long serialVersionUID = 1L;
 

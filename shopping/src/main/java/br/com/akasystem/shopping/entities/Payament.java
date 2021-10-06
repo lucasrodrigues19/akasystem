@@ -1,7 +1,5 @@
 package br.com.akasystem.shopping.entities;
 
-import java.util.UUID;
-
 import javax.persistence.Entity;
 import javax.persistence.Table;
 
@@ -11,14 +9,17 @@ import lombok.NoArgsConstructor;
 import lombok.Setter;
 import lombok.ToString;
 
-
+/**
+ * @author Lucas Rodrigues
+ * @since 2021/10/02
+ */
 @Getter
 @Setter
 @NoArgsConstructor
 @ToString
 @Entity
 @Table(name = "tbpayament")
-public class Payament extends SingleMainEntity<UUID> {
+public class Payament extends SingleMainEntity {
 	
 	private static final long serialVersionUID = 1L;
 	

@@ -1,65 +1,79 @@
 package br.com.akasystem.core.services.main;
 
 import java.util.Optional;
+import java.util.UUID;
 
-import javax.persistence.MappedSuperclass;
+import org.springframework.stereotype.Service;
 
-import org.springframework.beans.factory.annotation.Autowired;
-
-import br.com.akasystem.core.entities.main.MainEntity;
-import br.com.akasystem.core.enums.StatusActive;
+import br.com.akasystem.core.entities.main.SingleMainEntity;
+import br.com.akasystem.core.enums.Status;
 import br.com.akasystem.core.repository.main.MainRepository;
-import lombok.AllArgsConstructor;
 
 /**
  * @author Lucas Rodrigues
  * @since 2021/09/02
  * @param <T> Tipo da entidade
  * @param <I> Tipo do identificador ( ID )
+ * @param <R> Repositorio
  */
-@MappedSuperclass
-@AllArgsConstructor(onConstructor = @__(@Autowired))
-public abstract class MainService<T extends MainEntity<I>,I> {
+@Service
+public class MainService<T extends SingleMainEntity,I> {
 
-	private final MainRepository<T, I> akaMainRepository;
-	
+	private MainRepository<T, I> akaMainRepository;
 	
 	public T saveOrUpdate(T entity){
 		//TODO fazer auditoria
-//		if(entity.getId() != null) {
-//			//caso a entidade ja exista, preciso atualizar os dados alterados e manter os que não foram alterados
-//			I id = (I) entity.getId();
-//			Optional<T> optionalEntityExisting = akaMainRepository.findById(id);
-//			T entityExisting = optionalEntityExisting.get();
-//			margeEntity(entityExisting, entity);
-//		}
-		return save(entity);
-	}
-	
-	public T save(T entity){
-		return akaMainRepository.save(entity);
+		try {
+			if(entity.getId() != null) {
+				UUID id =   entity.getId();
+				Optional<T> optionalEntityExisting = akaMainRepository.findById(id);
+				T entityExisting = optionalEntityExisting.orElse(null);
+				if(entityExisting != null)
+					margeEntity(entityExisting, entity);
+			}
+			
+			return akaMainRepository.save(entity);
+		}catch(Exception e) {
+			e.printStackTrace();
+			return null;
+		}
 	}
 	
 	public void delete(T entity) {
 		akaMainRepository.delete(entity);
 	}
 	
-	public void removeById(I id) {
-		akaMainRepository.updateEntity(StatusActive.REMOVE.getINT(), id);
+	public void removeById(UUID id) {
+		akaMainRepository.updateEntity(Status.REMOVE, id);
 	}
 	
-	public void invativeById(I id) {
-		akaMainRepository.updateEntity(StatusActive.INATIVE.getINT(), id);
+	public void invativeById(UUID id) {
+		akaMainRepository.updateEntity(Status.INATIVE, id);
 	}
 	
-	public void activeById(I id) {
-		akaMainRepository.updateEntity(StatusActive.ACTIVE.getINT(), id);
+	public void activeById(UUID id) {
+		akaMainRepository.updateEntity(Status.ACTIVE, id);
 	}
 	
-	public T findById(I id) {
+	public T findById(UUID id) {
 		return akaMainRepository.findById(id).get();
 	}
 	
-	public abstract T margeEntity(T entityExisting, T modifiedEntity);
-		
+	/**
+	 * defino os dados alterados e mantenho os que não foram alterados.
+	 * @author Lucas Rodrigues
+	 * @since 2021/10/02
+	 * @param entityExisting
+	 * @param modifiedEntity
+	 * @return modifiedEntit
+	 */
+	public T margeEntity(T entityExisting, T modifiedEntity) {
+		modifiedEntity.merge(entityExisting);
+		return modifiedEntity;
+	}
+	
+	public void setRepository(MainRepository<T, I> repository) {
+		this.akaMainRepository = repository;
+	}
+	
 }

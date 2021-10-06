@@ -18,7 +18,7 @@ import org.hibernate.annotations.Check;
 import org.hibernate.annotations.Type;
 import org.hibernate.annotations.TypeDef;
 
-import br.com.akasystem.core.enums.StatusActive;
+import br.com.akasystem.core.enums.Status;
 import lombok.Getter;
 import lombok.Setter;
 import lombok.ToString;
@@ -26,17 +26,17 @@ import lombok.ToString;
 /**
  * @author Lucas Rodrigues
  * @since 2021/09/03
- * @param <I> Tipo do identificador
  */
 @Getter
 @Setter
 @ToString
 @MappedSuperclass
 @Check(constraints = "(name <> '')")
-public abstract class MainEntity<I> {
+
+public abstract class MainEntity {
 
 	
-	@Column(name = "name",length = 255, nullable = false)
+	@Column(name = "_name",length = 255, nullable = false)
 	private String name;
 	
 	@Column(name = "dtinsert", nullable = false)
@@ -53,7 +53,28 @@ public abstract class MainEntity<I> {
 	@Type(type="uuid-char")
 	private UUID idUpdate;
 	
-	@Column(name = "statusactive", nullable = false, columnDefinition = "numeric(1)")
+	@Column(name = "_status", nullable = false, columnDefinition = "numeric(1)")
 	@Enumerated(EnumType.ORDINAL)
-	private StatusActive statusActive;
+	private Status status;
+	
+	public void merge(MainEntity other) {
+		if(this.name == null)
+			this.name = other.getName();
+		
+		if(this.dtInsert == null)
+			this.dtInsert = other.getDtInsert();
+		
+		if(this.dtUpdate == null)
+			this.dtUpdate = other.getDtUpdate();
+		
+		if(this.idInsert == null)
+			this.idInsert = other.getIdInsert();
+		
+		if(this.idUpdate == null)
+			this.idUpdate = other.getIdUpdate();
+		
+		if(this.status == null)
+			this.status = other.getStatus();
+	}
+	
 }

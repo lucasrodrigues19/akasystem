@@ -1,8 +1,6 @@
 
 package br.com.akasystem.sales.entities;
 
-import java.util.UUID;
-
 import javax.persistence.Entity;
 import javax.persistence.FetchType;
 import javax.persistence.ForeignKey;
@@ -15,12 +13,16 @@ import lombok.Getter;
 import lombok.Setter;
 import lombok.ToString;
 
+/**
+ * @author Lucas Rodrigues
+ * @since 2021/10/02
+ */
 @ToString
 @Getter
 @Setter
 @Entity
 @Table(name = "tbsalesevolution")
-public class SalesEvolution extends SingleMainEntity<UUID> {
+public class SalesEvolution extends SingleMainEntity{
 
 	private static final long serialVersionUID = 1L;
 

@@ -9,15 +9,19 @@ import javax.persistence.Id;
 import javax.persistence.MappedSuperclass;
 
 import org.hibernate.annotations.Type;
+import org.springframework.util.StringUtils;
 
 import lombok.Getter;
 import lombok.Setter;
 
-
+/**
+ * @author Lucas Rodrigues
+ * @since 2021/10/02
+ */
 @Getter
 @Setter
 @MappedSuperclass
-public abstract class SingleMainEntity<I> extends MainEntity<I> implements Serializable{
+public abstract class SingleMainEntity extends MainEntity implements Serializable{
 
 	private static final long serialVersionUID = -8024087884425473851L;
 	
@@ -25,4 +29,13 @@ public abstract class SingleMainEntity<I> extends MainEntity<I> implements Seria
 	@Type(type="uuid-char")
 	@GeneratedValue(strategy = GenerationType.AUTO)
 	private UUID id;
+	
+	
+	public void merge(SingleMainEntity other) {
+		if(this.id == null)
+			this.id = other.getId();
+		
+		super.merge(other);
+		
+	}
 }

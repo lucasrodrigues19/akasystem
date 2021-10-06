@@ -2,16 +2,20 @@ package br.com.akasystem.core.enums;
 
 import lombok.Getter;
 
+/**
+ * @author Lucas Rodrigues
+ * @since 2021/10/02
+ */
 @Getter
-public enum StatusActive {
+public enum Status {
 
-	ACTIVE(1),
 	REMOVE(0),
-	INATIVE(3);
+	ACTIVE(1),
+	INATIVE(2);
 
 	private int INT;
 	
-	StatusActive(int i) {
+	Status(int i) {
 		this.INT = i;
 	}
 	

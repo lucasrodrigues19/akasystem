@@ -1,7 +1,5 @@
 package br.com.akasystem.shopping.entities;
 
-import java.util.UUID;
-
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.EnumType;
@@ -18,12 +16,16 @@ import lombok.Getter;
 import lombok.Setter;
 import lombok.ToString;
 
+/**
+ * @author Lucas Rodrigues
+ * @since 2021/10/02
+ */
 @ToString
 @Getter
 @Setter
 @Entity
 @Table(name = "tborderevolution")
-public class OrderEvolution extends SingleMainEntity<UUID> {
+public class OrderEvolution extends SingleMainEntity {
 
 	private static final long serialVersionUID = 1L;
 

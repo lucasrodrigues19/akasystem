@@ -1,10 +1,7 @@
 package br.com.akasystem.core.entities;
 
-import java.util.UUID;
-
 import javax.persistence.EmbeddedId;
 import javax.persistence.Entity;
-import javax.persistence.JoinColumn;
 import javax.persistence.Table;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
@@ -13,13 +10,16 @@ import br.com.akasystem.core.entities.main.MainEntity;
 import br.com.akasystem.core.entities.pk.PrivilegePK;
 import lombok.AccessLevel;
 import lombok.Data;
-import lombok.Getter;
 import lombok.Setter;
 
+/**
+ * @author Lucas Rodrigues
+ * @since 2021/10/02
+ */
 @Data
 @Entity
 @Table(name = "tbprivilege")
-public class Privilege extends MainEntity<UUID>{
+public class Privilege extends MainEntity{
 
 	@Setter(AccessLevel.NONE)
 	@EmbeddedId
