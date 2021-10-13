@@ -1,3 +1,10 @@
+## [1.0.6] Lucas Rodriges 2021/10/13
+## ADDED
+	configuração do perfil test
+	
+## CHANGE
+    alrerando metodo save, para entidades de tipagem fraca
+
 ## [1.0.5] Lucas Rodriges 2021/10/06
 ## FIXED
 	ajuste nas entidades

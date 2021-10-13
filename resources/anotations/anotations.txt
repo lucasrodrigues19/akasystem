@@ -1,8 +1,3 @@
-CONFIGURAR PERFIL TEST
-
-OLHAR O POR QUE O GETTER DE ORDERITEMDTO NÃO FUNCIONA
-
-
 OS SERVIÇOS NÃO SE COMUNICAM, MAS AS TABELAS NO  BANCO SIM!
 
 
@@ -33,14 +28,16 @@ Duvidas - gerais:
 			ex2:
 				Status { remove(0),active(1), inative(2)}
 				Status.active = 1, no banco.	
+	11/10/2021			
+		Ao usar @Query(value = "insert into...
+		o tipo do parametro precisa ser identico ao que está no banco
 		
-			
-
 	referencias:
 		Passar enum como parametro em um @Query:
 			https://stackoverflow.com/questions/44460394/can-i-use-enum-parameter-into-jparepository-nativequery
 		
-	
+		Usando @Query
+			https://www.baeldung.com/spring-data-jpa-query
 
 Duvidas - Entidades:
 	
@@ -55,3 +52,12 @@ Duvidas - Entidades:
 			Por que usar JOINED em Product?
 				ProductSold e ProductSale, são um Product, ou seja só vão existir
 				caso Product exista, São apenas para diferenciar o Product em serviços diferentes.				
+				
+				
+Definições:
+	Privilegios:
+		ADMIN:
+			SEL,UPD,DEL
+			Um usuário com esses privilegios, é apenas um user, não é um userPhysical, ou um userPejorative.
+			
+			Esse usuário pode apenas: criar outros usuários, deletar, inativar ou remover usuarios. Inativar, ativar ou remover vendas e pedidos.				

@@ -1,10 +1,10 @@
-package br.com.akasystem.core.repository;
+package br.com.akasystem.core.repositorys;
 
 import org.springframework.stereotype.Repository;
 
 import br.com.akasystem.core.entities.Privilege;
 import br.com.akasystem.core.entities.pk.PrivilegePK;
-import br.com.akasystem.core.repository.main.MainRepository;
+import br.com.akasystem.core.repositorys.main.MainRepository;
 
 /**
  * @author Lucas Rodrigues

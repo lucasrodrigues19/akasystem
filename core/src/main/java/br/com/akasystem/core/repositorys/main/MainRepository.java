@@ -1,4 +1,4 @@
-package br.com.akasystem.core.repository.main;
+package br.com.akasystem.core.repositorys.main;
 
 import java.util.UUID;
 
@@ -16,9 +16,9 @@ import br.com.akasystem.core.enums.Status;
  * @since 2021/10/02
  */
 @NoRepositoryBean
-public interface MainRepository<T extends MainEntity,I> extends JpaRepository<T, UUID>{
+public interface MainRepository<T extends MainEntity,I> extends JpaRepository<T, I>{
 
 	@Modifying
 	@Query(nativeQuery = true, value = "update #{#entityName} set #{#entityName}.statusActive=:#{#statusActive.INT} where #{#entityName}.id = :id")
-	void updateEntity(@Param(value="statusActive") Status statusActive, @Param(value="id") UUID id);
+	void updateEntity(@Param(value="statusActive") Status statusActive, @Param(value="id") I id);
 }

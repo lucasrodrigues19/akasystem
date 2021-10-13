@@ -1,4 +1,4 @@
-package br.com.akasystem.core.repository;
+package br.com.akasystem.core.repositorys;
 
 import java.util.UUID;
 
@@ -7,7 +7,7 @@ import javax.transaction.Transactional;
 import org.springframework.data.jpa.repository.JpaSpecificationExecutor;
 
 import br.com.akasystem.core.entities.User;
-import br.com.akasystem.core.repository.main.MainRepository;
+import br.com.akasystem.core.repositorys.main.MainRepository;
 
 /**
  * @author Lucas Rodrigues

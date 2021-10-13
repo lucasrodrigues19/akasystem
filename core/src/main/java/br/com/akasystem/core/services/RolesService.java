@@ -5,24 +5,28 @@ import java.util.UUID;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import br.com.akasystem.core.entities.Roles;
 import br.com.akasystem.core.entities.User;
+import br.com.akasystem.core.repositorys.RolesRepository;
 import br.com.akasystem.core.repositorys.UserRepository;
 import br.com.akasystem.core.services.main.MainService;
 
 /**
  * @author Lucas Rodrigues
- * @since 2021/10/02
+ * @since 2021/10/06
  */
 @Service
-public class UserService extends MainService<User, UUID>{
+public class RolesService extends MainService<Roles, UUID>{
 	
 	
-	private  UserRepository userRepository;
+	private  RolesRepository rolesRepository;
 	
 	@Autowired
-	public UserService(UserRepository userRepository) {
-		setRepository(userRepository);
-		this.userRepository = userRepository;
+	public RolesService(RolesRepository rolesRepository) {
+		setRepository(rolesRepository);
+		this.rolesRepository = rolesRepository;
 	}
+	
+	
 	
 }

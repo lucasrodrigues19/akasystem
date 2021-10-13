@@ -5,10 +5,14 @@ import java.util.HashSet;
 import java.util.Set;
 
 import javax.persistence.Column;
+import javax.persistence.DiscriminatorValue;
 import javax.persistence.Entity;
 import javax.persistence.FetchType;
 import javax.persistence.OneToMany;
+import javax.persistence.PrimaryKeyJoinColumn;
 import javax.persistence.Table;
+
+import org.hibernate.annotations.DiscriminatorFormula;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
 
@@ -27,6 +31,7 @@ import lombok.ToString;
 @Setter
 @Entity
 @Table(name = "tbuserpejorative")
+@PrimaryKeyJoinColumn(name="id")
 public class UserPejorative extends User {
 
 	private static final long serialVersionUID = 1L;

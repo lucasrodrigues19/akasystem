@@ -10,7 +10,7 @@ import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
 @SpringBootApplication
 @EntityScan({"br.com.akasystem.core.entities.main","br.com.akasystem.core.entities", "br.com.akasystem.sales.entities","br.com.akasystem.shopping.entities"})
 @ComponentScan({"br.com.akasystem.core","br.com.akasystem.sales","br.com.akasystem.shopping","br.com.akasystem.input"})
-@EnableJpaRepositories({"br.com.akasystem.core.repository.main","br.com.akasystem.core.repository"})
+@EnableJpaRepositories({"br.com.akasystem.core.repositorys.main","br.com.akasystem.core.repositorys","br.com.akasystem.sales.repositorys"})
 @EnableAutoConfiguration
 public class InputApplication {
 
